@@ -1,81 +1,33 @@
-/* index.css */
+/* index.css - now only contains global resets and variables */
+:root {
+  --primary-color: #4a4aef;
+  --secondary-color: #f4f4f9;
+  --text-color: #333;
+  --accent-color: #ff6b6b;
+  --border-color: #e0e0e0;
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+  --white: #ffffff;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --transition-speed: 0.3s;
+}
+
 body {
-  font-family: "Fira Code", monospace;
   margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
   padding: 0;
-  background: linear-gradient(to bottom right, #141e30, #243b55);
-  color: #f0f0f0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 2rem;
-}
-
-.app {
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
-  width: 90vw;
-  max-width: 1000px;
-}
-
-h1 {
-  text-align: center;
-  color: #00ffe0;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
-.course-list, .cart {
-  background: #1c1c2b;
-  border-radius: 15px;
-  padding: 1rem;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-}
-
-.course, .cart-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0.5rem 0;
-}
-
-button {
-  background: #00ffe0;
-  color: #000;
-  border: none;
-  padding: 0.4rem 1rem;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-button:hover {
-  background: #00c6a7;
-}
-
-input[type="number"] {
-  width: 60px;
-  padding: 0.2rem;
-  background: #333;
-  color: white;
-  border: 1px solid #555;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.total {
-  margin-top: 1rem;
-  text-align: right;
-  font-size: 1.2rem;
-  color: #fffa;
+  margin: 0;
 }
