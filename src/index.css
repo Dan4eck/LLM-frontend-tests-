@@ -1,33 +1,175 @@
-/* index.css - now only contains global resets and variables */
-:root {
-  --primary-color: #4a4aef;
-  --secondary-color: #f4f4f9;
-  --text-color: #333;
-  --accent-color: #ff6b6b;
-  --border-color: #e0e0e0;
-  --success-color: #2ecc71;
-  --error-color: #e74c3c;
-  --white: #ffffff;
-  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  --border-radius: 8px;
-  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --transition-speed: 0.3s;
-}
-
 body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #e0f7fa, #b3e5fc);
   margin: 0;
-  font-family: var(--font-main);
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  line-height: 1.6;
+  padding: 20px;
+  color: #333;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
+.app {
+  max-width: 1200px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-ul {
-  list-style: none;
-  padding: 0;
+h1 {
+  text-align: center;
+  color: #0277bd;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.course {
+  background: linear-gradient(to bottom, #ffffff, #f1f8e9);
+  border: none;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 150, 136, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 150, 136, 0.3);
+}
+
+.course h3 {
+  margin: 0 0 10px;
+  color: #388e3c;
+}
+
+.course p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.course button {
+  width: 100%;
+  background: linear-gradient(to right, #4caf50, #66bb6a);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.course button:hover {
+  background: linear-gradient(to right, #43a047, #5cb85c);
+}
+
+.cart {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 3px dashed #81d4fa;
+}
+
+.cart h2 {
+  color: #0277bd;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e8f5e9;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 200, 83, 0.1);
+}
+
+.cart-item h4 {
   margin: 0;
+  color: #2e7d32;
+}
+
+.cart-item input {
+  width: 60px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.cart-item button {
+  background: linear-gradient(to right, #f44336, #ef5350);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.cart-item button:hover {
+  background: linear-gradient(to right, #e53935, #f44336);
+}
+
+.promo-section {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.promo-section input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #81d4fa;
+  border-radius: 8px;
+}
+
+.promo-section button {
+  background: linear-gradient(to right, #29b6f6, #4fc3f7);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.promo-section button:hover {
+  background: linear-gradient(to right, #039be5, #29b6f6);
+}
+
+.promo-section button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.loading {
+  color: #ffb300;
+  font-style: italic;
+}
+
+.error {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.success {
+  color: #388e3c;
+  font-weight: bold;
+}
+
+.cart h3 {
+  text-align: right;
+  color: #0277bd;
+  font-size: 1.8em;
+  margin-top: 20px;
 }
